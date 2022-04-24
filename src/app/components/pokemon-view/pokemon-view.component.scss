@@ -1,0 +1,186 @@
+.pokemon-title-card{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 1px;
+
+position: absolute;
+width: 523px;
+height: 89px;
+left: 767px;
+top: 227px;
+}
+
+.pokemon-title{
+    position: static;
+width: 349px;
+height: 48px;
+left: 1px;
+top: 1px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 48px;
+/* identical to box height, or 160% */
+
+
+/* Primary/Azul/Azul 00 */
+
+color: #01426A;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+}
+.pokemo-subtitle{
+    position: static;
+width: 521px;
+height: 39px;
+left: 1px;
+top: 49px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+display: flex;
+align-items: center;
+
+/* Neutro / Gris 40 */
+
+color: #868686;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 0px;
+}
+
+.pokemon-container{
+    position: static;
+    width: 163.44px;
+    height: 137.58px;
+    left: 0px;
+    top: 0px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 17px;
+}
+.pokemon-rectangle{
+    position: absolute;
+top: 22.7%;
+bottom: 0%;
+
+/* Neutro / Gris 10 */
+
+background: #F2F2F2;
+border-radius: 20px;
+}
+
+.container-grid{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 534.31px;
+height: 428.75px;
+left: 0px;
+top: 200px;
+}
+
+.container-row{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 532.31px;
+height: 137.58px;
+left: 0px;
+top: 291.17px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 8px 0px;
+}
+
+.pokemon-name{
+    display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 6px 15px;
+
+position: absolute;
+left: 9.04%;
+right: 7.91%;
+top: 73.01%;
+bottom: 8.59%;
+width: 200px;
+height: 50px;
+/* Primary/Azul/Azul 00 */
+margin-bottom: 40px;
+background: #01426A;
+box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.1), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0718854), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0596107), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.05), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0403893), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0281146);
+border-radius: 10px;
+}
+
+.pokemon-text-name{
+    position: static;
+width: 57px;
+height: 18px;
+left: 63.74px;
+top: 3.66px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 12px;
+line-height: 18px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 10px;
+}
+
+.search-input{
+    position: absolute;
+width: 521px;
+height: 36px;
+left: 766px;
+top: 345px;
+
+}

@@ -1,0 +1,93 @@
+.card-information {
+
+    position: static;
+    width: 341px;
+    height: 54px;
+    left: 0px;
+    top: 48px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+
+    /* Neutro / Gris 40 */
+
+    color: #868686;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+    /* Frame 2608545 */
+
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 349px;
+    height: 523px;
+    left: 822px;
+    top: 288px;
+}
+
+.text-info {
+    position: static;
+
+    left: 0px;
+    top: 0px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 48px;
+    /* identical to box height, or 160% */
+
+
+    /* Primary/Azul/Azul 00 */
+
+    color: #01426A;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+
+
+
+.form-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 334px;
+    height: 272px;
+    left: 0px;
+    top: 133px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 31px 0px;
+}

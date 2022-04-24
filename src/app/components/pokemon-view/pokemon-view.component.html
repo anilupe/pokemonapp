@@ -1,0 +1,39 @@
+<div class="pokemon-title-card">
+    <span class="pokemon-title">Pókemon</span>
+    <span class="pokemo-subtitle">Selecciona 3 Pokémon para que sean parte de tu equipo</span>
+    <div class="search-input" style="position:absolute;left: 0px; top:110px;width: 800px;">
+        <mat-form-field appearance="outline" style="width:804px !important;">
+            <mat-label>Buscar</mat-label>
+            <input matInput placeholder="Buscar por índice, nombre..." (keyup)="search($event)">
+            <mat-icon matPrefix>search</mat-icon>
+            <mat-error>Campo Requerido</mat-error>
+        </mat-form-field>
+    </div>  
+</div>
+<div>
+
+</div>
+<div style="position: absolute; left: 766px; top:411px">
+    <div class="app flex-row align-items-center">
+        <div class="container">
+            <div class="card-deck row" *ngIf="pokemonList.length>1">
+                <div class="card col-md-3" *ngFor="let element of pokemonList; index as i"  style="background-color: #F2F2F2; margin: 10px;border-radius: 20px;">
+                    <div class="card-block">
+                        <img style="width: 150px; height: 150px; margin-bottom: 80px;" [src]="element.image" >
+                        <div class="pokemon-name"><span class="pokemon-text-name" style="color: white;">{{'#'+element.position}}  {{element.name}}</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-deck row" *ngIf="pokemonList.length<=1">
+                <div class="card" *ngFor="let element of pokemonList; index as i"  style="background-color: #F2F2F2; margin: 10px;border-radius: 20px;">
+                    <div class="card-block">
+                        <img style="width: 150px; height: 150px; margin-bottom: 80px;" [src]="element.image" >
+                        <div class="pokemon-name"><span class="pokemon-text-name" style="color: white;">{{'#'+element.position}}  {{element.name}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

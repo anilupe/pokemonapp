@@ -1,0 +1,9 @@
+    <span class="title-configuration">
+        <span class="arrow">&lt;</span>
+        ¡Hola! Configuremos tu perfil
+    </span>
+    <span class="subtitle-configuration">Queremos conocerte mejor.</span>
+    <div class="card-profile"></div>
+    <img class="img-profile" [src]="userImage">
+  <span class="img-profile-text"  *ngIf="typeUserInfo==typeUser.none">Imágen perfil</span>
+    <span class="username-text" *ngIf="typeUserInfo==typeUser.adult">{{username}}</span>

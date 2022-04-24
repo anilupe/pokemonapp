@@ -1,0 +1,26 @@
+<div class="row">
+
+<app-profile-card [userImage]="userImage" [typeUserInfo]="typeUserInfo"></app-profile-card>
+
+  <div class="attached-input" *ngIf="typeUserInfo==typeUser.none">
+        <div class="image-upload">
+            <label for="file-input" class="icon-upload">
+                <img width="24px"
+                    src="https://icons-for-free.com/download-icon-bx+cloud+upload-1325051858608930020_512.png" />
+            </label>
+            <input id="file-input" type="file" (change)="readImage($event);" />
+        </div>
+        <span class="attached-text">
+            Adjunta un foto
+        </span>
+    </div>
+    <app-profile-information *ngIf="typeUserInfo==typeUser.adult"
+    [age]="profile.age"
+    [dni]="profile.dni"
+    [hobby]="profile.hobby"
+    ></app-profile-information>
+
+  <app-profile-form (submit)="submitInfo($event)" *ngIf="typeUserInfo==typeUser.none"></app-profile-form>
+  <app-pokemon-view *ngIf="typeUserInfo==typeUser.adult"></app-pokemon-view>
+
+</div>

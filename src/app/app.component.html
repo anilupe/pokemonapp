@@ -1,0 +1,7 @@
+<app-splash-screen [hidden]="!loadingActive"></app-splash-screen >
+<mat-toolbar class="toolbar" [hidden]="loadingActive" >
+  <img src="../assets/logo.png" class="logo">
+</mat-toolbar>
+<div [hidden]="loadingActive">
+<router-outlet></router-outlet>
+</div>

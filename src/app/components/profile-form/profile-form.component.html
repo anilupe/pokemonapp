@@ -1,0 +1,50 @@
+<div class="card-information">
+    <span class="text-info">Tu información</span>
+    <span class="subtext-info">Completa la siguiente información para completar tu perfil</span>
+    <form clas="form-info" [formGroup]="profileForm" (ngSubmit)="next()">
+        <mat-form-field appearance="outline" style="width:334px !important;">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre" formControlName="name">
+            <mat-error>Campo Requerido</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="width:334px !important;">
+            <mat-label>Pasatiempo Favorito*</mat-label>
+            <mat-chip-list #chipList aria-label="Pasatiempo Favorito">
+                <mat-chip *ngFor="let hobby of hobbies" (removed)="remove(hobby)">
+                    {{hobby}}
+                    <button matChipRemove>
+                        <mat-icon>cancel</mat-icon>
+                    </button>
+                </mat-chip>
+                <input placeholder="Pasatiempo" #hobbyInput formControlName="hobbyInput" [matAutocomplete]="auto"
+                    [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    (matChipInputTokenEnd)="add($event)" >
+                            </mat-chip-list>
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                <mat-option *ngFor="let hobby of filteredHobby | async" [value]="hobby">
+                    {{hobby}}
+                </mat-option>
+            </mat-autocomplete>
+          
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="width:334px !important;">
+            <mat-label>Cumpleaños</mat-label>
+            <input matInput [matDatepicker]="datepicker" formControlName="birthdate">
+            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker>
+                <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancelar</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Aceptar</button>
+                </mat-datepicker-actions>
+            </mat-datepicker>
+            <mat-error>Campo Requerido</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="width:334px !important;">
+            <mat-label>Documento</mat-label>
+            <input matInput placeholder="Documento" formControlName="dni">
+            <mat-error>Campo Requerido</mat-error>
+        </mat-form-field>
+
+        <button class="mt-2" mat-raised-button color="primary" [disabled]="profileForm.invalid">Continuar</button>
+    </form>
+</div>
